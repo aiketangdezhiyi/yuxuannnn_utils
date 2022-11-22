@@ -3,3 +3,7 @@ export * from './eventBus';
 export * from './image';
 export * from './object';
 export * from './date';
+export * from './array';
+export * from './extend';
+export * from './window';
+export * from './type';
