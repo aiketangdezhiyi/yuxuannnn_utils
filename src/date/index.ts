@@ -7,4 +7,3 @@ export const formatDate = (
   return dayjs(time).format(format);
 };
 
-export * from 'dayjs';
