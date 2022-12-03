@@ -20,7 +20,7 @@ export const getObjOrArrayType = (obj: any) => {
   return undefined;
 };
 
-const deepCloneArr = (arr: Array<any>): Array<any> => {
+const deepCloneArr = (arr: any[]): any[] => {
   const result = [];
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] !== 'object') {

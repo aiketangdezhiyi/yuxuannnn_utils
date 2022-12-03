@@ -3,16 +3,22 @@ export type ImageSize = {
   height: number;
 };
 /**
- * 加载图片，加载完成后调用回调
+ * 加载图片，加载完成后调用回调,支持promise
  * @param src 需要加载的图片
  * @param cb 回调
  */
-export const loadImage = (src: string, cb?: () => void) => {
+export const loadImage = (src: string, cb?: (src?: string) => void) => {
   const oImg = new Image();
-  oImg.onload = function () {
-    typeof cb === 'function' && cb();
-  };
+  const pro = new Promise((resolve) => {
+    oImg.onload = () => {
+      typeof cb === 'function' && cb(src);
+      resolve(src);
+    };
+  });
+
   oImg.src = src;
+
+  return pro;
 };
 
 /**

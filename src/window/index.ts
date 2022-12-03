@@ -32,7 +32,7 @@ export function getViewportOffset() {
     };
   } else {
     if (document.compatMode === 'BackCompat') {
-      //怪异模式
+      // 怪异模式
       return {
         w: document.body.clientWidth,
         h: document.body.clientHeight,
