@@ -45,3 +45,36 @@ export const getRandomNumber = (min: number, max: number) => {
 export const getRandomString = (len: number) => {
   return Math.random().toString(16).substring(2).substring(0, len);
 };
+
+export const findMaxInArray = (
+  array: any[],
+  compare?: (curMax: any, curVal: any) => any,
+) => {
+  compare = compare || findMaxInArray.compare;
+  if (array.length === 0) return;
+  let max = array[0];
+  for (let i = 1; i < array.length; i++) {
+    max = compare(max, array[i]);
+  }
+  return max;
+};
+
+findMaxInArray.compare = function (a: any, b: any) {
+  return Math.max(a, b);
+};
+
+export const findMinInArray = (
+  array: any[],
+  compare?: (curMin: any, curVal: any) => any,
+) => {
+  compare = compare || findMinInArray.compare;
+  if (array.length === 0) return;
+  let min = array[0];
+  for (let i = 1; i < array.length; i++) {
+    min = compare(min, array[i]);
+  }
+  return min;
+};
+findMinInArray.compare = function (a: any, b: any) {
+  return Math.min(a, b);
+};

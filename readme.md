@@ -79,6 +79,10 @@ console.log(getRandomNumber(1, 100)); // 生成一个随机整数，包括min不
 console.log(getRandomString(8)); // 生成一个随机的字符串
 ```
 
+`findMaxInArray`
+
+`findMinInArray`
+
 ### 对象
 
 辨别对象和数组类型
@@ -114,3 +118,11 @@ onMounted(() => {
   });
 });
 ```
+
+### file
+
+`getMegabyte`获取兆的字节数
+
+### util
+
+`delay`延迟函数一般用于本地开发时模拟服务器延迟

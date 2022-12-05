@@ -7,3 +7,4 @@ export * from './array';
 export * from './extend';
 export * from './window';
 export * from './type';
+export * from './util';
