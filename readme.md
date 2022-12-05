@@ -79,9 +79,9 @@ console.log(getRandomNumber(1, 100)); // 生成一个随机整数，包括min不
 console.log(getRandomString(8)); // 生成一个随机的字符串
 ```
 
-`findMaxInArray`
+`findMaxInArray`获取数组中最大的值，提供自定义对比`compare`参数函数
 
-`findMinInArray`
+`findMinInArray`获取数组中最小的值，提供自定义对比`compare`参数函数
 
 ### 对象
 
