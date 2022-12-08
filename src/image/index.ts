@@ -26,7 +26,10 @@ export const loadImage = (src: string, cb?: (src?: string) => void) => {
  * @param src
  * @param cb
  */
-export const getImageSize = (src: string, cb?: (size: ImageSize) => void) => {
+export const getImageSize = (
+  src: string,
+  cb?: (size: ImageSize) => void,
+): Promise<ImageSize> => {
   const oImg = new Image();
   if (cb) {
     oImg.addEventListener('load', function () {
