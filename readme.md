@@ -28,6 +28,17 @@ loadImage(
 );
 ```
 
+### 懒加载控制器
+
+`lazyImageControl`LazyImageControl 的实例对象
+
+- `extends`用于注册其他 DOM 的滚动事件
+- `add`添加懒加载配置对象
+- `update`更新状态，可以在页面开始时手动调用
+- `setCanShow`用户可以自定义化加载规则
+- `removeItem`移除某一个图片配置对象
+  - 例如组件卸载之后 防止因为调用 hook 带来的闭包泄露问题
+
 ### 事件总线
 
 ```ts
@@ -123,6 +134,16 @@ onMounted(() => {
 
 `getMegabyte`获取兆的字节数
 
+`getFileSuffix`获取文件名后缀
+
+`changeFileToBase64`将文件对象转换成 base64
+
+`changeBuffer`将文件进行 hash 解析，生成唯一的文件 hash 信息
+
 ### util
 
 `delay`延迟函数一般用于本地开发时模拟服务器延迟
+
+`debounce`防抖函数
+
+`throttle`节流函数

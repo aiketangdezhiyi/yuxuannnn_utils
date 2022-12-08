@@ -9,3 +9,4 @@ export * from './window';
 export * from './type';
 export * from './util';
 export * from './file';
+export * from './lazyImageControl';
