@@ -1,6 +1,6 @@
 {
   "name": "yuxuannnn_utils",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "xs开发的前端工具包",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
