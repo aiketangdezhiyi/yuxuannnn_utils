@@ -42,7 +42,7 @@ export const getImageSize = (
   }
 
   // 返回一个promise
-  const rePro = new Promise((resolve) => {
+  const rePro: Promise<ImageSize> = new Promise((resolve) => {
     oImg.addEventListener('load', function () {
       resolve({
         width: this.naturalWidth,
